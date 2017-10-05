@@ -1,0 +1,51 @@
+# Every open API file needs this
+swagger: '2.0'
+# Document metada
+info: 
+ version: 0.3.0
+ title: Music API
+
+# URL data
+host: api.muzicplayz.com
+basePath: /v3 
+schemes: 
+ - https
+
+
+# Endpoints
+paths:
+  # Limit of playlist
+  /playlist:
+    get:
+     parameters:
+      - name: limit 
+        in: query
+        required: false
+        type: integer
+
+      - name: offset
+        in : query
+        required: false
+        type: integer
+
+      - name: search
+        in: query
+        required: false
+        type: string
+      
+      
+     responses:
+      200:
+       description: Succesful response
+            
+  /playlist/{playlist-id}: 
+   delete:
+    parameters:
+     - name: playlist-id
+       in: path
+       required: true
+       type: string
+  
+    responses:
+     200:
+      description: Succesful response

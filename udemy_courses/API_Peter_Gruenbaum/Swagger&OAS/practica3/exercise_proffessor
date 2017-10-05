@@ -1,0 +1,104 @@
+# Every Open API file needs this
+swagger: '2.0'
+
+# Document metadata
+info:
+  version: "0.0.1"
+  title: Example Photo Service
+  
+# URL data
+host: api.example.com
+basePath: /photo
+schemes:
+  - https
+
+# Endpoints
+paths:
+  # Photo albums 
+  /album:
+    # Get one or more albums
+    get:
+      # Query parameters
+      parameters:
+        # Starting date
+        - name: start
+          in: query
+          required: false
+          type: string
+          
+        # Ending date
+        - name: end
+          in: query
+          required: false
+          type: string
+          
+      # Incomplete response (to finish later)
+      responses:
+        # Response code
+        200:
+          description: Successful response
+          
+     # Create a new photo album
+    post:
+      # Query parameters
+      parameters:
+        - name: album
+          in: body
+          required: true
+          schema: 
+            $ref: '#/definitiona/Album'
+          
+      # Incomplete response (to finish later)
+      responses:
+        # Response code
+        200:
+          description: Successful response
+   
+  # Photo album
+  /album/{id}:    
+    # Get an album
+    get:
+      # Query parameters
+      parameters:
+        # Album id
+        - name: id
+          in: path
+          required: true
+          type: integer
+          
+        # Customer level 
+        - name: Access-level
+          in: header
+          required: false
+          type: string
+          
+       # Incomplete response (to finish later)
+      responses:
+        # Response code
+        200:
+          description: Successful response
+          
+definitions:
+  Album:
+    properties:
+      name: 
+        type: string
+
+        
+  Product:
+    properties:
+      product_id:
+        type: string
+        description: Unique identifier representing a specific product for a given latitude & longitude. For example, uberX in San Francisco will have a different product_id than uberX in Los Angeles.
+      description:
+        type: string
+        description: Description of product.
+      display_name:
+        type: string
+        description: Display name of product.
+      capacity:
+        type: integer
+        description: Capacity of product. For example, 4 people.
+      image:
+        type: string
+        description: Image URL representing the product.

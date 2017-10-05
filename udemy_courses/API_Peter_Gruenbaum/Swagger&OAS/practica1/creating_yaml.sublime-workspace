@@ -1,0 +1,350 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "title: Wizard's Choice\nauthor: Delight Games\nsections:\n  - id:  intro\n    content:\n      - >\n        You are a young wizard seeking treasure and glory. You\n        are walking along a path in the forest. Night has just\n        fallen and you're thinking about how it might be a good\n        idea to find a campsite. After all, you are in goblin\n        territory, and it is dangerous to travel in the dark.\n      - Suddenly you smell something awful. What do you do ?\n\n    choices:\n      - description: Dive flat on your face\n        id: dive\n\n      - description: Hide\n        id: hide \n\n      - description: Stop and listen\n        id: stop\n \n# To add another section\n\n\n- id: hide \n  content:\n    - >\n       When in doubt, hiding is a fine strategy. \n       And the forest offers plenty of cover.     \n    - >\n       Now inside the brush, you can see green, glowing eyes\n       staring at you from behind a tree several paces away.\n    - >\n       You hear a snort as several green-skinned goblins \n       charge out of hiding toward you.\n    - >\n       What do you do?\n\n  choices:\n\n    - id: fight\n      content: Flight the globins\n    - id: run\n      content: Run away\n",
+			"file": "exercise.yaml",
+			"file_size": 1217,
+			"file_write_time": 131516007014921623,
+			"settings":
+			{
+				"buffer_size": 1172,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "# Every open API file needs this\nswagger: '2.0'\n\n# Document metada\ninfo:\n  version: \"0.0.1\"\n  title: Example Photo Service\n\n# URL data\nhost: api.example.com\nbasePath/: photo\nschemes: \n  - https\n\n# Endpoints\npaths:\n  # Photo albums\n  /album:\n    # Get one or more albums\n    get:\n      # Query parameters\n      parameters:\n        - name: start\n          in: query\n          required: false \n          type: string\n        \n        # Ending date\n        - name: end \n          in:  query\n          required: false\n          type: string\n\n      # Incomplete response (to finish later)\n      responses:\n        # Response code\n        200:\n          description: Successful response\n\n\n  # Photo albums\n  /album/{id}:\n    # Get an album\n    get:\n      # Query parameters\n      parameters:\n        # Album id\n        - name: id\n          in: path\n          required: true \n          type: integer\n        \n        # Customer level\n        - name: Access-level \n          in:  header\n          required: false\n          type: string\n\n      # Incomplete response (to finish later)\n      responses:\n        # Response code\n        200:\n          description: Successful response",
+			"file": "OAS_basics.yaml",
+			"file_size": 0,
+			"file_write_time": 131516072971663329,
+			"settings":
+			{
+				"buffer_size": 1170,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "OAS_basics_json.json",
+			"settings":
+			{
+				"buffer_size": 1629,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "title: Wizard's Choice\nauthor: Delight Games\nsections: \n  - id: intro\n    content:\n      - >\n        You are a young wizard seeking treasure and glory. You\n        are walking along a path in the forest. Night has just \n        fallen and you're thinking about how it might be a good\n        idea to find a campsite. After all, you are in goblin\n        territory, and it is dangerous to travel in the dark.\n      - Suddenly you smell something awful. What do you do?\n\n    choices:\n      - description: Dive flat on your face\n        id: dive \n\n      - description: Hide\n        id: hide \n\n      - description: Stop and listen\n        id: stop \n\n  - id: hide\n    content:\n      - >\n        When in doubt, hiding is a fine strategy. And the\n        forest offers plenty of cover. \n      - >\n        Now inside the brush, you can see green, glowing eyes\n        staring at you from behind a tree several paces away.\n        You hear a snort as several green-skinned goblins charge\n        out of hiding toward you.\n      - What do you do?\n\n    choices:\n      - description: Fight the goblins\n        id: fight\n\n      - description: Run away\n        id: run\n",
+			"file": "exercise_yamls_tutor",
+			"file_size": 1199,
+			"file_write_time": 131516000763102934,
+			"settings":
+			{
+				"buffer_size": 1155,
+				"line_ending": "Windows",
+				"name": "title: Wizard's Choice"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "instal",
+		"selected_items":
+		[
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"r",
+				"Set Syntax: R"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 540.0
+	},
+	"console":
+	{
+		"height": 682.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+	],
+	"file_history":
+	[
+		"/C/Users/User/Desktop/cualquier.php",
+		"/C/xampp/htdocs/curso_RESTAPIs/index.html",
+		"/C/xampp/htdocs/curso_php/constantes.php"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "exercise.yaml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1172,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1039,
+								1039
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "OAS_basics.yaml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1170,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								1170
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/YAML/YAML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "OAS_basics_json.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1629,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								400,
+								400
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/jsonnet syntax/jsonnet.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "exercise_yamls_tutor",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1155,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1155,
+								1155
+							]
+						],
+						"settings":
+						{
+							"auto_name": "title: Wizard's Choice",
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 38.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "creating_yaml.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
