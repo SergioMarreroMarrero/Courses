@@ -1,0 +1,126 @@
+swagger: '2.0'
+
+info:
+ version: "0.3.0" 
+ title: API music
+ 
+host: api.music.com
+basePath: /v3
+schemes:
+ - https
+ 
+paths:
+ /playlist:
+  get:
+  
+   parameters:
+   
+    - name: limite
+      in: query
+      required: false
+      type: integer
+      
+    - name: offset
+      in: query
+      required: false
+      type: integer
+      
+    - name: search
+      in: query
+      required: false
+      type: string     
+      
+   responses:
+    200:
+     description: Successful response
+     
+     
+  post:
+  
+   parameters:
+   
+    - name: playlist
+      in: body
+      required: true
+      schema:
+       $ref: '#/definitions/newPlaylist'
+      
+   responses:
+    200:
+     description: Successful response     
+     
+     
+   
+ /playlist/{playlist-id}:
+  get:
+  
+   parameters:
+   
+    - name: playlist-id
+      in: path
+      required: true
+      type: string
+
+      
+   responses:
+    200:
+     description: Successful response
+     schema:
+       $ref: '#/definitions/playlistWithSongs'
+   
+  delete:
+  
+   parameters:
+   
+    - name: playlist-id
+      in: path
+      required: true
+      type: string
+      
+   responses:
+    200:
+     description: Successful response
+
+  
+  
+definitions:
+ newPlaylist:
+  properties:
+   name: 
+    type: string
+   songIds:
+    type: array
+    items: 
+     type: integer
+
+ playlistWithSongs:
+  properties:
+   id:
+    type: integer
+   name: 
+    type: string
+   songs:
+    type: array
+    items: 
+      $ref: '#/definitions/song'
+
+ song:
+  properties:
+   id:
+    type: integer
+   title: 
+    type: string
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
