@@ -7,7 +7,7 @@ c <- table(mtcars$gear)
 barplot(c, main="Car Distribution", 
         xlab="Number of Gears")
 
-t=tapply(iris$Sepal.Length, iris$Species, mean)
+ t=tapply(iris$Sepal.Length, iris$Species, mean)
 
 barplot(t, main="Average Sepal Length", 
         xlab="Species",ylab="Mean")
@@ -16,7 +16,7 @@ library(ggplot2)
 data(diamonds)
 head(diamonds)
 
-table(diamonds$color, diamonds$clarity)
+table(diamonds$color, diamonds$clarity, diamonds$cut)
 
 barplot(table(diamonds$color, diamonds$clarity),
          legend = levels(diamonds$color),           
